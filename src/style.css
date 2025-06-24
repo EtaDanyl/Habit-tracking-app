@@ -1,0 +1,57 @@
+:root {
+  --mint: #6de8d0;
+  --mint-dark: #59c3c3;
+  --gray-bg: #f8f9fa;
+  --text-color: #2e2e2e;
+  --lozenge: #e0f7f4;
+}
+
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: var(--gray-bg);
+  color: var(--text-color);
+}
+
+.app-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.day-navigation {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.day-button {
+  background-color: var(--lozenge);
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.day-button.selected {
+  background-color: var(--mint-dark);
+  color: white;
+}
+
+.habit-list {
+  list-style: none;
+  padding: 0;
+}
+
+.habit-item {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}

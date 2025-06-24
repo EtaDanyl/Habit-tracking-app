@@ -1,0 +1,182 @@
+.habit-list {
+  padding: 16px;
+  max-width: 480px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  text-align: center;
+  color: #3eb489;
+}
+
+.add-habit {
+  margin-bottom: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+.add-habit input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #a6d8c7;
+  font-size: 1rem;
+  outline-offset: 2px;
+  transition: border-color 0.3s ease;
+}
+
+.add-habit input:focus {
+  border-color: #3eb489;
+}
+
+.add-habit button {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  background-color: #3eb489;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-habit button:hover {
+  background-color: #32a97c;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.habit-item {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+label {
+  cursor: pointer;
+  flex: 1;
+  user-select: none;
+}
+
+label.disabled {
+  color: #999;
+  cursor: default;
+}
+
+input[type='checkbox'] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+input[type='checkbox']:disabled {
+  cursor: not-allowed;
+}
+
+@media (max-width: 400px) {
+  .habit-list {
+    padding: 12px 8px;
+  }
+
+  .add-habit input {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  .add-habit button {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .habit-item {
+    font-size: 1rem;
+  }
+
+  input[type='checkbox'] {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.error-dialog-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.error-dialog {
+  background-color: white;
+  padding: 24px 32px;
+  border-radius: 10px;
+  max-width: 320px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  outline: none;
+  text-align: center;
+}
+
+.error-dialog h3 {
+  margin-top: 0;
+  color: #b00020;
+  font-weight: 700;
+}
+
+.error-dialog p {
+  margin: 16px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.close-btn {
+  background-color: #b00020;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: #8a0016;
+}
+
+.streak {
+  margin-left: 8px;
+  padding: 2px 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  background-color: #eee;
+  border-radius: 12px;
+  color: #555;
+  user-select: none;
+}
+
+.longest-streak {
+  background-color: #3eb489;
+  color: white;
+  box-shadow: 0 0 8px #3eb489aa;
+}
